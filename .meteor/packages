@@ -20,6 +20,6 @@ http
 peerlibrary:xml2js
 meteorhacks:npm
 
-npm-container
+#npm-container
 peerlibrary:util
 underscore
