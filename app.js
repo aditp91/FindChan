@@ -26,7 +26,7 @@ if (Meteor.isClient) {
   });
 
   Template.body.events({
-    "submit .new-channel": function (event) {
+    "submit .new-inputform": function (event) {
       // This function is called when the new channel form is submitted
       var text = event.target.channelinputtext.value;
       // console.log(event);
@@ -41,7 +41,12 @@ if (Meteor.isClient) {
     },
     "change .hide-completed input": function (event) {
       Session.set("hideCompleted", event.target.checked);
+    },
+    "click .regular-button": function (event) {
+      //template.find('label:query-label').text = "CHANGED TEXT!!!";
+      $('#query-label').text("CHANGED LABEL!!!");
     }
+
   });
 
   Template.channel.events({
