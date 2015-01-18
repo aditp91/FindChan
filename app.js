@@ -43,9 +43,16 @@ if (Meteor.isClient) {
       Session.set("hideCompleted", event.target.checked);
     },
     "click .regular-button": function (event) {
-      //template.find('label:query-label').text = "CHANGED TEXT!!!";
-      $('#query-label').text("CHANGED LABEL!!!");
+      var show = template.find('input.showinputtext').value;
+      var cableprov = $('#cableinputtext').text;
+
+      alert(show);
+      /*
+      if (show === "") {
+        $('#query-label').text("BAD INPUT");
+      }*/
     }
+
 
   });
 
