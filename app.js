@@ -42,15 +42,13 @@ if (Meteor.isClient) {
     "change .hide-completed input": function (event) {
       Session.set("hideCompleted", event.target.checked);
     },
-    "click .regular-button": function (event) {
-      var show = template.find('input.showinputtext').value;
-      var cableprov = $('#cableinputtext').text;
+    "click .regular-button": function (event, template) {
+      var show = template.find('#showinputtext').value;
+      var cableprov = template.find('#cableinputtext').value;
 
-      alert(show);
-      /*
-      if (show === "") {
+      if (show === "" || cableprov === "") {
         $('#query-label').text("BAD INPUT");
-      }*/
+      }
     }
 
 
