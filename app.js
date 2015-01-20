@@ -48,20 +48,12 @@ if (Meteor.isClient) {
 
       if (show === "" || cableprov === "") {
         $('#query-label').text("BAD INPUT");
+      } else {
+          var TVShowObject = TVShow_List.findOne( {name: show} );
+          $('#query-label').text(TVShowObject.channel);
       }
     }
 
-
-  });
-
-  Template.channel.events({
-    "click .toggle-checked": function () {
-      // Set the checked property to the opposite of its current value
-      Channel_List.update(this._id, {$set: {checked: ! this.checked}});
-    },
-    "click .delete": function () {
-      Channel_List.remove(this._id);
-    }
   });
 
 }
