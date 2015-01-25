@@ -1,0 +1,138 @@
+{
+	"application": {
+
+		"title": "FindChan",
+		"meta_title": "FindChan",
+		"meta_description": "FindChan Web App",
+		"theme": "bootswatch-darkly",
+
+		"collections": [
+			{
+				"name": "tvlistings",
+				"fields": [
+					{ "name": "name", "title": "Name", "required": true, "exportable": true },
+					{ "name": "channelname", "title": "Channel Name", "exportable": true },
+					{ "name": "channelnumber", "title": "Channel Number", "exportable": true },
+					{ "name": "cableprovider", "title": "Cable Provider", "exportable": true }
+				]
+			}
+		],
+
+		"free_zone": {
+
+			"pages": [
+				{ 
+					"name": "home", 
+					"title": "",
+					"components": [
+						{
+							"name": "home_jumbotron",
+							"title": "FindChan",
+							"type": "jumbotron",
+							"text": "Web application that finds local TV listings and displays information given a user's inquiry. It comes in handy when one wants to know what channel and when a tv show is playing on it (vice versa), respective to it's cable provider's listing. The user can query for channels, channel numbers, tv shows, and cable provider listings.",
+							"button_title": "Continue &raquo;",
+							"button_route": "tvlistingspage"
+						}
+					]
+				},
+				{
+					"name": "tvlistingspage",
+					"components": [
+						{
+							"name": "view",
+							"type": "dataview",
+							"title": "TV Listings",
+							"text_if_empty": "No TV Show Listings :(",
+							"query": {
+								"name": "tvlistings",
+								"collection": "tvlistings",
+								"filter": {}
+							},
+							"insert_route": "tvlistingspage.insert",
+							"edit_route": "tvlistingspage.edit",
+							"edit_route_params": [
+								{ "name": "tvlisting_id", "value": "this._id" }
+							],
+							"details_route": "tvlistingspage.details",
+							"details_route_params": [
+								{ "name": "tvlisting_id", "value": "this._id" }
+							]
+						}
+					],
+					"pages": [
+						{
+							"name": "insert",
+							"components": [
+								{
+									"name": "insert_form",
+									"type": "form",
+									"mode": "insert",
+									"title": "New TV Listing",
+									"query": {
+										"name": "tvlistings_empty",
+										"collection": "tvlistings",
+										"filter": {"_id": null}
+									},
+									"submit_route": "tvlistingspage",
+									"cancel_route": "tvlistingspage"
+								}
+							]
+						},
+						{
+							"name": "details",
+							"route_params": ["tvlisting_id"],
+							"components": [
+								{
+									"name": "details_form",
+									"type": "form",
+									"mode": "read_only",
+									"title": "Details",
+									"layout": "horizontal",
+									"query": {
+										"name": "tvlisting",
+										"collection": "tvlistings",
+										"filter": { "_id": ":tvlisting_id" }
+									},
+									"close_route": "tvlistingspage",
+									"back_route": "tvlistingspage"
+								}
+							]
+						},
+
+						{
+							"name": "edit",
+							"route_params": ["tvlisting_id"],
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Edit TV Listing",
+									"submit_route": "tvlistingspage",
+									"cancel_route": "tvlistingspage",
+									"query": {
+										"name": "tvlisting",
+										"collection": "tvlistings",
+										"filter": { "_id": ":tvlisting_id" }
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+
+			"menus": [
+				{
+					"name": "main_menu",
+					"class": "nav navbar-nav",
+					"dest_selector": "#menu",
+					"items": [
+						{ "title": "About", "route": "home" },
+						{ "title": "TV Listing View", "route": "tvlistingspage" }
+					]
+				}
+			]
+		}
+	}
+}
