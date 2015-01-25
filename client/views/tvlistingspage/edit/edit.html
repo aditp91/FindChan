@@ -1,4 +1,4 @@
-<template name="CustomersInsert">
+<template name="TvlistingspageEdit">
 	<div class="page-container container" id="content">
 		<div class="row" id="title_row">
 			<div class="col-md-12">
@@ -6,14 +6,14 @@
 				</div>
 			</div>
 		</div>
-		{{> CustomersInsertInsertForm}}
+		{{> TvlistingspageEditEditForm}}
 	</div>
 </template>
 
-<template name="CustomersInsertInsertForm">
+<template name="TvlistingspageEditEditForm">
 	<div class="">
 		<h2 id="component-title">
-			New TV Show
+			Edit TV Listing
 		</h2>
 		<form id="form" role="form">
 			{{#if errorMessage}}
@@ -27,48 +27,48 @@
 				{{infoMessage}}
 			</div>
 			{{/if}}
-			<div class="form-group text field-name">
+			<div class="form-group  field-name">
 				<label for="name">
 					Name
 				</label>
 				<div class="input-div">
-					<input type="text" name="name" value="" class="form-control" autofocus="autofocus" required="required" data-type="string">
+					<input type="text" name="name" value="{{tvlisting.name}}" class="form-control" autofocus="autofocus" required="required">
 					<span id="help-text" class="help-block">
 					</span>
 					<span id="error-text" class="help-block">
 					</span>
 				</div>
 			</div>
-			<div class="form-group text field-phone">
-				<label for="phone">
+			<div class="form-group  field-channelname">
+				<label for="channelname">
 					Channel Name
 				</label>
 				<div class="input-div">
-					<input type="text" name="phone" value="" class="form-control" data-type="string">
+					<input type="text" name="channelname" value="{{tvlisting.channelname}}" class="form-control">
 					<span id="help-text" class="help-block">
 					</span>
 					<span id="error-text" class="help-block">
 					</span>
 				</div>
 			</div>
-			<div class="form-group text field-email">
-				<label for="email">
-                    Cable Provider
-				</label>
-				<div class="input-div">
-					<input type="text" name="email" value="" class="form-control" data-type="string">
-					<span id="help-text" class="help-block">
-					</span>
-					<span id="error-text" class="help-block">
-					</span>
-				</div>
-			</div>
-			<div class="form-group text field-note">
-				<label for="note">
+			<div class="form-group  field-channelnumber">
+				<label for="channelnumber">
 					Channel Number
 				</label>
 				<div class="input-div">
-					<textarea class="form-control" name="note"></textarea>
+					<input type="text" name="channelnumber" value="{{tvlisting.channelnumber}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-cableprovider">
+				<label for="cableprovider">
+					Cable Provider
+				</label>
+				<div class="input-div">
+					<input type="text" name="cableprovider" value="{{tvlisting.cableprovider}}" class="form-control">
 					<span id="help-text" class="help-block">
 					</span>
 					<span id="error-text" class="help-block">

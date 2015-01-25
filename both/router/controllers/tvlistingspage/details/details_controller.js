@@ -1,5 +1,5 @@
-this.CustomersEditController = RouteController.extend({
-	template: "CustomersEdit",
+this.TvlistingspageDetailsController = RouteController.extend({
+	template: "TvlistingspageDetails",
 
 	yieldTemplates: {
 		/*YIELD_TEMPLATES*/
@@ -19,7 +19,7 @@ this.CustomersEditController = RouteController.extend({
 		
 
 		var subs = [
-			Meteor.subscribe("customer", this.params.customerId)
+			Meteor.subscribe("tvlisting", this.params.tvlisting_id)
 		];
 		var ready = true;
 		_.each(subs, function(sub) {
@@ -34,7 +34,7 @@ this.CustomersEditController = RouteController.extend({
 
 		return {
 			params: this.params || {},
-			customer: Customers.findOne({_id:this.params.customerId}, {})
+			tvlisting: Tvlistings.findOne({_id:this.params.tvlisting_id}, {})
 		};
 		/*DATA_FUNCTION*/
 	},

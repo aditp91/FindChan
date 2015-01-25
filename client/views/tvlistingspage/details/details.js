@@ -1,10 +1,10 @@
 var pageSession = new ReactiveDict();
 
-Template.CustomersEdit.rendered = function() {
+Template.TvlistingspageDetails.rendered = function() {
 	
 };
 
-Template.CustomersEdit.events({
+Template.TvlistingspageDetails.events({
 	"click #page-close-button": function(e, t) {
 		e.preventDefault();
 		Router.go("", {});
@@ -17,15 +17,15 @@ Template.CustomersEdit.events({
 	
 });
 
-Template.CustomersEdit.helpers({
+Template.TvlistingspageDetails.helpers({
 	
 });
 
-Template.CustomersEditEditForm.rendered = function() {
+Template.TvlistingspageDetailsDetailsForm.rendered = function() {
 	
 
-	pageSession.set("customersEditEditFormInfoMessage", "");
-	pageSession.set("customersEditEditFormErrorMessage", "");
+	pageSession.set("tvlistingspageDetailsDetailsFormInfoMessage", "");
+	pageSession.set("tvlistingspageDetailsDetailsFormErrorMessage", "");
 
 	$(".input-group.date").each(function() {
 		var format = $(this).find("input[type='text']").attr("data-format");
@@ -50,24 +50,24 @@ Template.CustomersEditEditForm.rendered = function() {
 	$("input[autofocus]").focus();
 };
 
-Template.CustomersEditEditForm.events({
+Template.TvlistingspageDetailsDetailsForm.events({
 	"submit": function(e, t) {
 		e.preventDefault();
-		pageSession.set("customersEditEditFormInfoMessage", "");
-		pageSession.set("customersEditEditFormErrorMessage", "");
+		pageSession.set("tvlistingspageDetailsDetailsFormInfoMessage", "");
+		pageSession.set("tvlistingspageDetailsDetailsFormErrorMessage", "");
 		
 		var self = this;
 
 		function submitAction() {
 			if(!t.find("#form-cancel-button")) {
-				pageSession.set("customersEditEditFormInfoMessage", "Saved.");
+				pageSession.set("tvlistingspageDetailsDetailsFormInfoMessage", "Saved.");
 			}
 
-			Router.go("customers", {});
+			/*SUBMIT_REDIRECT*/
 		}
 
 		function errorAction(msg) {
-			pageSession.set("customersEditEditFormErrorMessage", "Error. " + msg);
+			pageSession.set("tvlistingspageDetailsDetailsFormErrorMessage", "Error. " + msg);
 		}
 
 		validateForm(
@@ -81,7 +81,7 @@ Template.CustomersEditEditForm.events({
 			function(values) {
 				
 
-				Customers.update({ _id: t.data.customer._id }, { $set: values }, function(e) { if(e) errorAction(e.message); else submitAction(); });
+				
 			}
 		);
 
@@ -92,28 +92,28 @@ Template.CustomersEditEditForm.events({
 
 		
 
-		Router.go("customers", {});
+		/*CANCEL_REDIRECT*/
 	},
 	"click #form-close-button": function(e, t) {
 		e.preventDefault();
 
-		/*CLOSE_REDIRECT*/
+		Router.go("tvlistingspage", {});
 	},
 	"click #form-back-button": function(e, t) {
 		e.preventDefault();
 
-		/*BACK_REDIRECT*/
+		Router.go("tvlistingspage", {});
 	}
 
 	
 });
 
-Template.CustomersEditEditForm.helpers({
+Template.TvlistingspageDetailsDetailsForm.helpers({
 	"infoMessage": function() {
-		return pageSession.get("customersEditEditFormInfoMessage");
+		return pageSession.get("tvlistingspageDetailsDetailsFormInfoMessage");
 	},
 	"errorMessage": function() {
-		return pageSession.get("customersEditEditFormErrorMessage");
+		return pageSession.get("tvlistingspageDetailsDetailsFormErrorMessage");
 	}
 	
 });

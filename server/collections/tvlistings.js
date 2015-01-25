@@ -1,4 +1,4 @@
-Customers.allow({
+Tvlistings.allow({
 	insert: function (userId, doc) {
 		return true;
 	},
@@ -12,14 +12,14 @@ Customers.allow({
 	}
 });
 
-Customers.before.insert(function(userId, doc) {
+Tvlistings.before.insert(function(userId, doc) {
 	doc.createdAt = new Date();
 	doc.createdBy = userId;
 
 	
 });
 
-Customers.before.update(function(userId, doc, fieldNames, modifier, options) {
+Tvlistings.before.update(function(userId, doc, fieldNames, modifier, options) {
 	modifier.$set = modifier.$set || {};
 	modifier.$set.modifiedAt = new Date();
 	modifier.$set.modifiedBy = userId;
@@ -27,18 +27,18 @@ Customers.before.update(function(userId, doc, fieldNames, modifier, options) {
 	
 });
 
-Customers.before.remove(function(userId, doc) {
+Tvlistings.before.remove(function(userId, doc) {
 	
 });
 
-Customers.after.insert(function(userId, doc) {
+Tvlistings.after.insert(function(userId, doc) {
 	
 });
 
-Customers.after.update(function(userId, doc, fieldNames, modifier, options) {
+Tvlistings.after.update(function(userId, doc, fieldNames, modifier, options) {
 	
 });
 
-Customers.after.remove(function(userId, doc) {
+Tvlistings.after.remove(function(userId, doc) {
 	
 });

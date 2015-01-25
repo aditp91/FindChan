@@ -1,5 +1,5 @@
-this.CustomersInsertController = RouteController.extend({
-	template: "CustomersInsert",
+this.TvlistingspageInsertController = RouteController.extend({
+	template: "TvlistingspageInsert",
 
 	yieldTemplates: {
 		/*YIELD_TEMPLATES*/
@@ -19,7 +19,7 @@ this.CustomersInsertController = RouteController.extend({
 		
 
 		var subs = [
-			Meteor.subscribe("customers_empty")
+			Meteor.subscribe("tvlistings_empty")
 		];
 		var ready = true;
 		_.each(subs, function(sub) {
@@ -34,7 +34,7 @@ this.CustomersInsertController = RouteController.extend({
 
 		return {
 			params: this.params || {},
-			customers_empty: Customers.findOne({_id:null}, {})
+			tvlistings_empty: Tvlistings.findOne({_id:null}, {})
 		};
 		/*DATA_FUNCTION*/
 	},

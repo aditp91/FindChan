@@ -1,10 +1,10 @@
 var pageSession = new ReactiveDict();
 
-Template.Customers.rendered = function() {
+Template.Tvlistingspage.rendered = function() {
 	
 };
 
-Template.Customers.events({
+Template.Tvlistingspage.events({
 	"click #page-close-button": function(e, t) {
 		e.preventDefault();
 		Router.go("", {});
@@ -17,18 +17,18 @@ Template.Customers.events({
 	
 });
 
-Template.Customers.helpers({
+Template.Tvlistingspage.helpers({
 	
 });
 
-var CustomersViewItems = function(cursor) {
+var TvlistingspageViewItems = function(cursor) {
 	if(!cursor) {
 		return [];
 	}
 
-	var searchString = pageSession.get("CustomersViewSearchString");
-	var sortBy = pageSession.get("CustomersViewSortBy");
-	var sortAscending = pageSession.get("CustomersViewSortAscending");
+	var searchString = pageSession.get("TvlistingspageViewSearchString");
+	var sortBy = pageSession.get("TvlistingspageViewSortBy");
+	var sortAscending = pageSession.get("TvlistingspageViewSortAscending");
 	if(typeof(sortAscending) == "undefined") sortAscending = true;
 
 	var raw = cursor.fetch();
@@ -40,7 +40,7 @@ var CustomersViewItems = function(cursor) {
 	} else {
 		searchString = searchString.replace(".", "\\.");
 		var regEx = new RegExp(searchString, "i");
-		var searchFields = ["name", "phone", "email", "note"];
+		var searchFields = ["name", "channelname", "channelnumber", "cableprovider"];
 		filtered = _.filter(raw, function(item) {
 			var match = false;
 			_.each(searchFields, function(field) {
@@ -68,9 +68,9 @@ var CustomersViewItems = function(cursor) {
 	return filtered;
 };
 
-var CustomersViewExport = function(cursor, fileType) {
-	var data = CustomersViewItems(cursor);
-	var exportFields = ["name", "phone", "email", "note"];
+var TvlistingspageViewExport = function(cursor, fileType) {
+	var data = TvlistingspageViewItems(cursor);
+	var exportFields = ["name", "channelname", "channelnumber", "cableprovider"];
 
 	var str = convertArrayOfObjects(data, exportFields, fileType);
 
@@ -80,12 +80,12 @@ var CustomersViewExport = function(cursor, fileType) {
 }
 
 
-Template.CustomersView.rendered = function() {
-	pageSession.set("CustomersViewStyle", "table");
+Template.TvlistingspageView.rendered = function() {
+	pageSession.set("TvlistingspageViewStyle", "table");
 	
 };
 
-Template.CustomersView.events({
+Template.TvlistingspageView.events({
 	"submit #dataview-controls": function(e, t) {
 		return false;
 	},
@@ -98,7 +98,7 @@ Template.CustomersView.events({
 			if(searchInput) {
 				searchInput.focus();
 				var searchString = searchInput.val();
-				pageSession.set("CustomersViewSearchString", searchString);
+				pageSession.set("TvlistingspageViewSearchString", searchString);
 			}
 
 		}
@@ -114,7 +114,7 @@ Template.CustomersView.events({
 				var searchInput = form.find("#dataview-search-input");
 				if(searchInput) {
 					var searchString = searchInput.val();
-					pageSession.set("CustomersViewSearchString", searchString);
+					pageSession.set("TvlistingspageViewSearchString", searchString);
 				}
 
 			}
@@ -129,7 +129,7 @@ Template.CustomersView.events({
 				var searchInput = form.find("#dataview-search-input");
 				if(searchInput) {
 					searchInput.val("");
-					pageSession.set("CustomersViewSearchString", "");
+					pageSession.set("TvlistingspageViewSearchString", "");
 				}
 
 			}
@@ -141,94 +141,94 @@ Template.CustomersView.events({
 
 	"click #dataview-insert-button": function(e, t) {
 		e.preventDefault();
-		Router.go("customers.insert", {});
+		Router.go("tvlistingspage.insert", {});
 	},
 
 	"click #dataview-export-default": function(e, t) {
 		e.preventDefault();
-		CustomersViewExport(this.customers, "csv");
+		TvlistingspageViewExport(this.tvlistings, "csv");
 	},
 
 	"click #dataview-export-csv": function(e, t) {
 		e.preventDefault();
-		CustomersViewExport(this.customers, "csv");
+		TvlistingspageViewExport(this.tvlistings, "csv");
 	},
 
 	"click #dataview-export-tsv": function(e, t) {
 		e.preventDefault();
-		CustomersViewExport(this.customers, "tsv");
+		TvlistingspageViewExport(this.tvlistings, "tsv");
 	},
 
 	"click #dataview-export-json": function(e, t) {
 		e.preventDefault();
-		CustomersViewExport(this.customers, "json");
+		TvlistingspageViewExport(this.tvlistings, "json");
 	}
 
 	
 });
 
-Template.CustomersView.helpers({
+Template.TvlistingspageView.helpers({
 	"isEmpty": function() {
-		return !this.customers || this.customers.count() == 0;
+		return !this.tvlistings || this.tvlistings.count() == 0;
 	},
 	"isNotEmpty": function() {
-		return this.customers && this.customers.count() > 0;
+		return this.tvlistings && this.tvlistings.count() > 0;
 	},
 	"isNotFound": function() {
-		return this.customers && pageSession.get("CustomersViewSearchString") && CustomersViewItems(this.customers).length == 0;
+		return this.tvlistings && pageSession.get("TvlistingspageViewSearchString") && TvlistingspageViewItems(this.tvlistings).length == 0;
 	},
 	"searchString": function() {
-		return pageSession.get("CustomersViewSearchString");
+		return pageSession.get("TvlistingspageViewSearchString");
 	},
 	"viewAsTable": function() {
-		return pageSession.get("CustomersViewStyle") == "table";
+		return pageSession.get("TvlistingspageViewStyle") == "table";
 	},
 	"viewAsList": function() {
-		return pageSession.get("CustomersViewStyle") == "list";
+		return pageSession.get("TvlistingspageViewStyle") == "list";
 	},
 	"viewAsGallery": function() {
-		return pageSession.get("CustomersViewStyle") == "gallery";
+		return pageSession.get("TvlistingspageViewStyle") == "gallery";
 	}
 
 	
 });
 
 
-Template.CustomersViewTable.rendered = function() {
+Template.TvlistingspageViewTable.rendered = function() {
 	
 };
 
-Template.CustomersViewTable.events({
+Template.TvlistingspageViewTable.events({
 	"click .th-sortable": function(e, t) {
 		e.preventDefault();
-		var oldSortBy = pageSession.get("CustomersViewSortBy");
+		var oldSortBy = pageSession.get("TvlistingspageViewSortBy");
 		var newSortBy = $(e.target).attr("data-sort");
 
-		pageSession.set("CustomersViewSortBy", newSortBy);
+		pageSession.set("TvlistingspageViewSortBy", newSortBy);
 		if(oldSortBy == newSortBy) {
-			var sortAscending = pageSession.get("CustomersViewSortAscending") || false;
-			pageSession.set("CustomersViewSortAscending", !sortAscending);
+			var sortAscending = pageSession.get("TvlistingspageViewSortAscending") || false;
+			pageSession.set("TvlistingspageViewSortAscending", !sortAscending);
 		} else {
-			pageSession.set("CustomersViewSortAscending", true);
+			pageSession.set("TvlistingspageViewSortAscending", true);
 		}
 	}
 });
 
-Template.CustomersViewTable.helpers({
+Template.TvlistingspageViewTable.helpers({
 	"tableItems": function() {
-		return CustomersViewItems(this.customers);
+		return TvlistingspageViewItems(this.tvlistings);
 	}
 });
 
 
-Template.CustomersViewTableItems.rendered = function() {
+Template.TvlistingspageViewTableItems.rendered = function() {
 	
 };
 
-Template.CustomersViewTableItems.events({
+Template.TvlistingspageViewTableItems.events({
 	"click td": function(e, t) {
 		e.preventDefault();
-		Router.go("customers.details", {customerId: this._id});
+		Router.go("tvlistingspage.details", {tvlisting_id: this._id});
 		return false;
 	},
 
@@ -244,7 +244,7 @@ Template.CustomersViewTableItems.events({
 					label: "Yes",
 					className: "btn-success",
 					callback: function() {
-						Customers.remove({ _id: me._id });
+						Tvlistings.remove({ _id: me._id });
 					}
 				},
 				danger: {
@@ -257,11 +257,11 @@ Template.CustomersViewTableItems.events({
 	},
 	"click #edit-button": function(e, t) {
 		e.preventDefault();
-		Router.go("customers.edit", {customerId: this._id});
+		Router.go("tvlistingspage.edit", {tvlisting_id: this._id});
 		return false;
 	}
 });
 
-Template.CustomersViewTableItems.helpers({
+Template.TvlistingspageViewTableItems.helpers({
 
 });

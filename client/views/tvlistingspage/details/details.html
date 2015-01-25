@@ -1,4 +1,4 @@
-<template name="CustomersDetails">
+<template name="TvlistingspageDetails">
 	<div class="page-container container" id="content">
 		<div class="row" id="title_row">
 			<div class="col-md-12">
@@ -6,11 +6,11 @@
 				</div>
 			</div>
 		</div>
-		{{> CustomersDetailsDetailsForm}}
+		{{> TvlistingspageDetailsDetailsForm}}
 	</div>
 </template>
 
-<template name="CustomersDetailsDetailsForm">
+<template name="TvlistingspageDetailsDetailsForm">
 	<div class="">
 		<h2 id="component-title">
 			<a href="#" id="form-back-button" class="btn btn-default" title="back">
@@ -31,43 +31,43 @@
 				{{infoMessage}}
 			</div>
 			{{/if}}
-			<div class="form-group text field-name">
+			<div class="form-group  field-name">
 				<label for="name" class="col-sm-3 control-label">
 					Name
 				</label>
 				<div class="input-div col-sm-9">
 					<p class="form-control-static">
-						{{customer.name}}
+						{{tvlisting.name}}
 					</p>
 				</div>
 			</div>
-			<div class="form-group text field-phone">
-				<label for="phone" class="col-sm-3 control-label">
-                    Channel Name
+			<div class="form-group  field-channelname">
+				<label for="channelname" class="col-sm-3 control-label">
+					Channel Name
 				</label>
 				<div class="input-div col-sm-9">
 					<p class="form-control-static">
-						{{customer.phone}}
+						{{tvlisting.channelname}}
 					</p>
 				</div>
 			</div>
-			<div class="form-group text field-email">
-				<label for="email" class="col-sm-3 control-label">
+			<div class="form-group  field-channelnumber">
+				<label for="channelnumber" class="col-sm-3 control-label">
+					Channel Number
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{tvlisting.channelnumber}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-cableprovider">
+				<label for="cableprovider" class="col-sm-3 control-label">
 					Cable Provider
 				</label>
 				<div class="input-div col-sm-9">
 					<p class="form-control-static">
-						{{customer.email}}
-					</p>
-				</div>
-			</div>
-			<div class="form-group text field-note">
-				<label for="note" class="col-sm-3 control-label">
-                    Channel Number
-				</label>
-				<div class="input-div col-sm-9">
-					<p class="form-control-static">
-						{{customer.note}}
+						{{tvlisting.cableprovider}}
 					</p>
 				</div>
 			</div>

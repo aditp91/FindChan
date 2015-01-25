@@ -1,4 +1,4 @@
-<template name="Customers">
+<template name="Tvlistingspage">
 	<div class="page-container container" id="content">
 		<div class="row" id="title_row">
 			<div class="col-md-12">
@@ -6,14 +6,14 @@
 				</div>
 			</div>
 		</div>
-		{{> CustomersView}}
+		{{> TvlistingspageView}}
 	</div>
 </template>
 
-<template name="CustomersView">
+<template name="TvlistingspageView">
 	<div id="dataview" class="">
 		<h2 id="component-title">
-			TV Shows
+			TV Listings
 		</h2>
 		<form id="dataview-controls" class="form-inline">
 			<div id="dataview-controls-insert" class="form-group">
@@ -80,32 +80,32 @@
 		</div>
 		{{else}}
 		<div id="dataview-data">
-			{{#if viewAsTable}} {{> CustomersViewTable}} {{/if}}
+			{{#if viewAsTable}} {{> TvlistingspageViewTable}} {{/if}}
 		</div>
 		{{/if}}	
 		{{else}}
 		<div class="alert alert-info">
-			No TV Shows :(
+			No TV Show Listings :(
 		</div>
 		{{/if}}
 	</div>
 </template>
 
-<template name="CustomersViewTable">
+<template name="TvlistingspageViewTable">
 	<table id="dataview-table" class="table table-striped table-hover">
 		<thead id="dataview-table-header">
 			<tr id="dataview-table-header-row">
 				<th class="th-sortable" data-sort="name">
 					Name
 				</th>
-				<th class="th-sortable" data-sort="phone">
+				<th class="th-sortable" data-sort="channelname">
 					Channel Name
 				</th>
-				<th class="th-sortable" data-sort="email">
-					Cable Provider
+				<th class="th-sortable" data-sort="channelnumber">
+					Channel Number
 				</th>
-				<th class="th-sortable" data-sort="note">
-					Channel #
+				<th class="th-sortable" data-sort="cableprovider">
+					Cable Provider
 				</th>
 				<th>
 					&nbsp;
@@ -116,24 +116,24 @@
 			</tr>
 		</thead>
 		<tbody id="dataview-table-items">
-			{{#each tableItems}} {{> CustomersViewTableItems}} {{/each}}
+			{{#each tableItems}} {{> TvlistingspageViewTableItems}} {{/each}}
 		</tbody>
 	</table>
 </template>
 
-<template name="CustomersViewTableItems">
+<template name="TvlistingspageViewTableItems">
 	<tr id="dataview-table-items-row">
 		<td>
 			{{name}}
 		</td>
 		<td>
-			{{phone}}
+			{{channelname}}
 		</td>
 		<td>
-			{{email}}
+			{{channelnumber}}
 		</td>
 		<td>
-			{{note}}
+			{{cableprovider}}
 		</td>
 		<td class="td-icon">
 			<span id="edit-button" class="fa fa-pencil" title="Edit">

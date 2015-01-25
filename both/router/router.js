@@ -21,8 +21,8 @@ if(Meteor.isClient) {
 Router.map(function () {
 
 	this.route("home", {path: "/", controller: "HomeController"});
-	this.route("customers", {path: "/customers", controller: "CustomersController"});
-	this.route("customers.insert", {path: "/customers/insert", controller: "CustomersInsertController"});
-	this.route("customers.details", {path: "/customers/details/:customerId", controller: "CustomersDetailsController"});
-	this.route("customers.edit", {path: "/customers/edit/:customerId", controller: "CustomersEditController"});/*ROUTER_MAP*/
+	this.route("tvlistingspage", {path: "/tvlistingspage", controller: "TvlistingspageController"});
+	this.route("tvlistingspage.insert", {path: "/tvlistingspage/insert", controller: "TvlistingspageInsertController"});
+	this.route("tvlistingspage.details", {path: "/tvlistingspage/details/:tvlisting_id", controller: "TvlistingspageDetailsController"});
+	this.route("tvlistingspage.edit", {path: "/tvlistingspage/edit/:tvlisting_id", controller: "TvlistingspageEditController"});/*ROUTER_MAP*/
 });

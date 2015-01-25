@@ -1,10 +1,10 @@
 var pageSession = new ReactiveDict();
 
-Template.CustomersDetails.rendered = function() {
+Template.TvlistingspageEdit.rendered = function() {
 	
 };
 
-Template.CustomersDetails.events({
+Template.TvlistingspageEdit.events({
 	"click #page-close-button": function(e, t) {
 		e.preventDefault();
 		Router.go("", {});
@@ -17,15 +17,15 @@ Template.CustomersDetails.events({
 	
 });
 
-Template.CustomersDetails.helpers({
+Template.TvlistingspageEdit.helpers({
 	
 });
 
-Template.CustomersDetailsDetailsForm.rendered = function() {
+Template.TvlistingspageEditEditForm.rendered = function() {
 	
 
-	pageSession.set("customersDetailsDetailsFormInfoMessage", "");
-	pageSession.set("customersDetailsDetailsFormErrorMessage", "");
+	pageSession.set("tvlistingspageEditEditFormInfoMessage", "");
+	pageSession.set("tvlistingspageEditEditFormErrorMessage", "");
 
 	$(".input-group.date").each(function() {
 		var format = $(this).find("input[type='text']").attr("data-format");
@@ -50,24 +50,24 @@ Template.CustomersDetailsDetailsForm.rendered = function() {
 	$("input[autofocus]").focus();
 };
 
-Template.CustomersDetailsDetailsForm.events({
+Template.TvlistingspageEditEditForm.events({
 	"submit": function(e, t) {
 		e.preventDefault();
-		pageSession.set("customersDetailsDetailsFormInfoMessage", "");
-		pageSession.set("customersDetailsDetailsFormErrorMessage", "");
+		pageSession.set("tvlistingspageEditEditFormInfoMessage", "");
+		pageSession.set("tvlistingspageEditEditFormErrorMessage", "");
 		
 		var self = this;
 
 		function submitAction() {
 			if(!t.find("#form-cancel-button")) {
-				pageSession.set("customersDetailsDetailsFormInfoMessage", "Saved.");
+				pageSession.set("tvlistingspageEditEditFormInfoMessage", "Saved.");
 			}
 
-			/*SUBMIT_REDIRECT*/
+			Router.go("tvlistingspage", {});
 		}
 
 		function errorAction(msg) {
-			pageSession.set("customersDetailsDetailsFormErrorMessage", "Error. " + msg);
+			pageSession.set("tvlistingspageEditEditFormErrorMessage", "Error. " + msg);
 		}
 
 		validateForm(
@@ -81,7 +81,7 @@ Template.CustomersDetailsDetailsForm.events({
 			function(values) {
 				
 
-				
+				Tvlistings.update({ _id: t.data.tvlisting._id }, { $set: values }, function(e) { if(e) errorAction(e.message); else submitAction(); });
 			}
 		);
 
@@ -92,28 +92,28 @@ Template.CustomersDetailsDetailsForm.events({
 
 		
 
-		/*CANCEL_REDIRECT*/
+		Router.go("tvlistingspage", {});
 	},
 	"click #form-close-button": function(e, t) {
 		e.preventDefault();
 
-		Router.go("customers", {});
+		/*CLOSE_REDIRECT*/
 	},
 	"click #form-back-button": function(e, t) {
 		e.preventDefault();
 
-		Router.go("customers", {});
+		/*BACK_REDIRECT*/
 	}
 
 	
 });
 
-Template.CustomersDetailsDetailsForm.helpers({
+Template.TvlistingspageEditEditForm.helpers({
 	"infoMessage": function() {
-		return pageSession.get("customersDetailsDetailsFormInfoMessage");
+		return pageSession.get("tvlistingspageEditEditFormInfoMessage");
 	},
 	"errorMessage": function() {
-		return pageSession.get("customersDetailsDetailsFormErrorMessage");
+		return pageSession.get("tvlistingspageEditEditFormErrorMessage");
 	}
 	
 });
