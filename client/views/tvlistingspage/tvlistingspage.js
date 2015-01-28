@@ -73,17 +73,6 @@ var TvlistingspageViewItems = function(cursor) {
 };
 
 var TvlistingspageViewExport = function(cursor, fileType) {
-	// get the data given the cursor to the array of objects
-	var data = TvlistingspageViewItems(cursor);
-
-	// create export fields given the tvlisting fields
-	var exportFields = ["name", "channelname", "channelnumber", "cableprovider"];
-
-	// convert the data array given filetype, create the filename, and download
-	var str = convertArrayOfObjects(data, exportFields, fileType);
-	var filename = "export." + fileType;
-
-	downloadLocalResource(str, filename, "");
 };
 
 
