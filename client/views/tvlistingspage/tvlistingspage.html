@@ -38,55 +38,50 @@
 				{{/if}}
 			</div>
 			<div id="dataview-controls-export" class="form-group">
-				{{#if isNotEmpty}}			
-		{{#if isFound}}
-				<div>
-				</div>
-				{{else}}
-				<div class="btn-group">
-					<button type="button" class="btn btn-default" id="dataview-export-default">
-						Export
-					</button>
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						<span class="caret">
-						</span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li>
-							<a href="#" id="dataview-export-csv">
-								Export to CSV
-							</a>
-						</li>
-						<li>
-							<a href="#" id="dataview-export-tsv">
-								Export to TSV
-							</a>
-						</li>
-						<li>
-							<a href="#" id="dataview-export-json">
-								Export to JSON
-							</a>
-						</li>
-					</ul>
-				</div>
-				{{/if}}			
-	{{/if}}
+				{{#if isNotEmpty}}
+						<div class="btn-group">
+							<button type="button" class="btn btn-default" id="dataview-export-default">
+								Export
+							</button>
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="caret">
+								</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#" id="dataview-export-csv">
+										Export to CSV
+									</a>
+								</li>
+								<li>
+									<a href="#" id="dataview-export-tsv">
+										Export to TSV
+									</a>
+								</li>
+								<li>
+									<a href="#" id="dataview-export-json">
+										Export to JSON
+									</a>
+								</li>
+							</ul>
+						</div>
+				{{/if}}
 			</div>
 		</form>
 		{{#if isNotEmpty}}	
 			{{#if isNotFound}}
-		<div class="alert alert-warning">
-			"{{searchString}}" not found.
-		</div>
-		{{else}}
-		<div id="dataview-data">
-			{{#if viewAsTable}} {{> TvlistingspageViewTable}} {{/if}}
-		</div>
-		{{/if}}	
-		{{else}}
-		<div class="alert alert-info">
-			No TV Show Listings :(
-		</div>
+				<div class="alert alert-warning">
+					"{{searchString}}" not found.
+				</div>
+			{{else}}
+				<div id="dataview-data">
+					{{#if viewAsTable}} {{> TvlistingspageViewTable}} {{/if}}
+				</div>
+			{{/if}}
+			{{else}}
+				<div class="alert alert-info">
+					No TV Show Listings :(
+				</div>
 		{{/if}}
 	</div>
 </template>

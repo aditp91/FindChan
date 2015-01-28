@@ -21,11 +21,14 @@ Template.Tvlistingspage.helpers({
 	
 });
 
+/* Function to fetch a raw set of data, filter the data, or sort the data, and send it back
+ */
 var TvlistingspageViewItems = function(cursor) {
 	if(!cursor) {
 		return [];
 	}
 
+	// define the conditions of the current viewable data set
 	var searchString = pageSession.get("TvlistingspageViewSearchString");
 	var sortBy = pageSession.get("TvlistingspageViewSortBy");
 	var sortAscending = pageSession.get("TvlistingspageViewSortAscending");
@@ -33,29 +36,30 @@ var TvlistingspageViewItems = function(cursor) {
 
 	var raw = cursor.fetch();
 
-	// filter
+	// filter by given search
 	var filtered = [];
 	if(!searchString || searchString == "") {
 		filtered = raw;
-	} else {
+	} else { // this functionality is only when the user makes a search
 		searchString = searchString.replace(".", "\\.");
 		var regEx = new RegExp(searchString, "i");
 		var searchFields = ["name", "channelname", "channelnumber", "cableprovider"];
-		filtered = _.filter(raw, function(item) {
+		filtered = _.filter(raw, function(item) { // match each item in the search string
 			var match = false;
 			_.each(searchFields, function(field) {
 				var value = (getPropertyValue(field, item) || "") + "";
 
+				//now filter given reg ex value
 				match = match || (value && value.match(regEx));
 				if(match) {
 					return false;
 				}
-			})
+			});
 			return match;
 		});
 	}
 
-	// sort
+	// sort by category
 	if(sortBy) {
 		filtered = _.sortBy(filtered, sortBy);
 
@@ -69,15 +73,18 @@ var TvlistingspageViewItems = function(cursor) {
 };
 
 var TvlistingspageViewExport = function(cursor, fileType) {
+	// get the data given the cursor to the array of objects
 	var data = TvlistingspageViewItems(cursor);
+
+	// create export fields given the tvlisting fields
 	var exportFields = ["name", "channelname", "channelnumber", "cableprovider"];
 
+	// convert the data array given filetype, create the filename, and download
 	var str = convertArrayOfObjects(data, exportFields, fileType);
-
 	var filename = "export." + fileType;
 
-	downloadLocalResource(str, filename, "application/octet-stream");
-}
+	downloadLocalResource(str, filename, "");
+};
 
 
 Template.TvlistingspageView.rendered = function() {
