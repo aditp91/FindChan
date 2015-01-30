@@ -73,6 +73,16 @@ var TvlistingspageViewItems = function(cursor) {
 };
 
 var TvlistingspageViewExport = function(cursor, fileType) {
+	var data = TvlistingspageViewItems(cursor);
+
+	var exportFields = ['name', 'channelname', 'channelnumber', 'cableprovider'];
+
+	var resultstring = convertArrayOfObjects(data, exportFields, fileType);
+	var filename = "export." + fileType;
+
+	downloadLocalResource(resultstring, filename, "");
+
+
 };
 
 
