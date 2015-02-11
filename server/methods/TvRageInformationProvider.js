@@ -14,4 +14,8 @@ var getShows = function (search_show) {
 
 var getFullDetails = function (search_showId) {
 
+    var show;
+
+    return show;
+
 };
