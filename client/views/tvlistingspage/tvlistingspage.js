@@ -145,6 +145,20 @@ Template.TvlistingspageView.events({
 		return true;
 	},
 
+	"click #dataview-testhttp-button": function(e, t) {
+		e.preventDefault();
+		//Router.go("tvrage_informationprovider.getShows", {});
+
+		Meteor.call('getShows',
+			function (err, result) {
+				if (err) {
+					alert('Error: ' + err.message)
+				} else {
+					alert(JSON.stringify(result, null, 2))
+				}
+			});
+	},
+
 	"click #dataview-insert-button": function(e, t) {
 		e.preventDefault();
 		Router.go("tvlistingspage.insert", {});

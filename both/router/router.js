@@ -25,4 +25,5 @@ Router.map(function () {
 	this.route("tvlistingspage.insert", {path: "/tvlistingspage/insert", controller: "TvlistingspageInsertController"});
 	this.route("tvlistingspage.details", {path: "/tvlistingspage/details/:tvlisting_id", controller: "TvlistingspageDetailsController"});
 	this.route("tvlistingspage.edit", {path: "/tvlistingspage/edit/:tvlisting_id", controller: "TvlistingspageEditController"});/*ROUTER_MAP*/
+	this.route("tvlistingspage.")
 });
