@@ -1,28 +1,28 @@
-/**
- * Created by Adi on 2/11/15.
- */
-
-
 Meteor.methods({
 
+    /*
+        Method to get show listings using TVRage API
+     */
     getShows: function (showquery) {
 
         //change
-        showquery = "buffy";
+        showquery = "arrow";
 
         var BASE_URL = "http://services.tvrage.com/feeds/";
         var url = BASE_URL + 'search.php?show=' + showquery;
         var shows = "";
         this.unblock();
 
-        Meteor.http.get(url, function (error, result) {
-
-            shows = result.statusCode;
-            console.log(shows);
-        });
+        // Make HTTP get request and display code and XML result
+        try {
+            shows = HTTP.call('GET', url);
+            console.log(shows.statusCode);
+        } catch (e) {
+            console.log('Exception calling', url);
+            throw e;
+        }
 
         return shows;
-
     }
 
 

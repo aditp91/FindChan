@@ -145,7 +145,7 @@ Template.TvlistingspageView.events({
 		return true;
 	},
 
-	"click #dataview-testhttp-button": function(e, t) {
+	"click #dataview-tvragehttpget-button": function(e, t) {
 		e.preventDefault();
 		//Router.go("tvrage_informationprovider.getShows", {});
 
