@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2030" max-vertical-offset="4395">
-              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+              <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,8 @@
       <file leaf-file-name="tvrage_informationprovider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5283308" vertical-offset="0" max-vertical-offset="653">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41347626" vertical-offset="0" max-vertical-offset="653">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -876,14 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2030" max-vertical-offset="4395">
-          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.12" vertical-offset="84" max-vertical-offset="2310">
@@ -892,10 +884,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2030" max-vertical-offset="4395">
+          <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5283308" vertical-offset="0" max-vertical-offset="653">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41347626" vertical-offset="0" max-vertical-offset="653">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding />
         </state>
       </provider>
