@@ -23,17 +23,18 @@ Meteor.methods({
             throw e;
         }
 
-        // parse the xml
+        // Parse the xml
         var extractedData = "";
         var parser = new xml2js.Parser(); //using xml2js object converter
         parser.parseString(result.content, function(err,result){
-            //Extract the value from the data element
+            // Extract the value from the data element
             extractedData = result['Results'];
-            console.log(extractedData);
-            //console.log(util.inspect(extractedData));
-
         });
 
+        //console.log(util.inspect(extractedData, false, null));
+
+        var show_1 = extractedData.show[0].name[0];
+        console.log(show_1);
 
         return shows;
     }
