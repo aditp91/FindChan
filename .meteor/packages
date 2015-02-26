@@ -17,3 +17,7 @@ mrt:moment
 rajit:bootstrap3-datepicker
 http
 peerlibrary:xml2js
+meteorhacks:npm
+
+npm-container
+peerlibrary:util

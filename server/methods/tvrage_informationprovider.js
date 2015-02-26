@@ -24,14 +24,16 @@ Meteor.methods({
         }
 
         // parse the xml
-
         var extractedData = "";
         var parser = new xml2js.Parser(); //using xml2js object converter
         parser.parseString(result.content, function(err,result){
             //Extract the value from the data element
             extractedData = result['Results'];
             console.log(extractedData);
+            //console.log(util.inspect(extractedData));
+
         });
+
 
         return shows;
     }
