@@ -34,9 +34,11 @@ Meteor.methods({
 
         //console.log(util.inspect(extractedData, false, null));
 
-        for (i=0; i < 1000; i++) {
-            var show_1 = extractedData.show[i].name[0];
-            console.log(show_1);
+        for (i=0; i < 5000; i++) {
+            if (extractedData.show[i].status[0] === '1') {
+                var show_1 = extractedData.show[i].name[0];
+                console.log(show_1);
+            }
         }
 
         return shows;
