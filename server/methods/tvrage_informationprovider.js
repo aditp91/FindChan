@@ -33,8 +33,10 @@ Meteor.methods({
 
         //console.log(util.inspect(extractedData, false, null));
 
-        var show_1 = extractedData.show[0].name[0];
-        console.log(show_1);
+        for (i=0; i < 100; i++) {
+            var show_1 = extractedData.show[i].name[0];
+            console.log(show_1);
+        }
 
         return shows;
     }
