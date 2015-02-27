@@ -3,7 +3,7 @@ Meteor.methods({
     /*
         Method to get show listings using TVRage API
      */
-    getShows: function () {
+    getShows: function() {
 
         //change
         var showlist = "show_list.php";
@@ -16,10 +16,11 @@ Meteor.methods({
 
         // Make HTTP get request and display code and XML result
         try {
+            console.log('Making request to TVRage API: ' + url);
             result = HTTP.call('GET', url);
-            console.log(result.statusCode);
+            console.log('Status code: ' + result.statusCode);
         } catch (e) {
-            console.log('Exception calling', url);
+            console.log('Exception calling TVRage API', url);
             throw e;
         }
 
@@ -33,7 +34,7 @@ Meteor.methods({
 
         //console.log(util.inspect(extractedData, false, null));
 
-        for (i=0; i < 100; i++) {
+        for (i=0; i < 1000; i++) {
             var show_1 = extractedData.show[i].name[0];
             console.log(show_1);
         }
@@ -41,6 +42,7 @@ Meteor.methods({
         return shows;
     }
 
-
-
 });
+
+
+
