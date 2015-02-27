@@ -3,13 +3,13 @@ Meteor.methods({
     /*
         Method to get show listings using TVRage API
      */
-    getShows: function (showquery) {
+    getShows: function () {
 
         //change
-        showquery = "walking";
+        var showlist = "show_list.php";
 
         var BASE_URL = "http://services.tvrage.com/feeds/";
-        var url = BASE_URL + 'search.php?show=' + showquery;
+        var url = BASE_URL + showlist;
         var shows = "";
         var result = "";
         this.unblock();
@@ -28,7 +28,7 @@ Meteor.methods({
         var parser = new xml2js.Parser(); //using xml2js object converter
         parser.parseString(result.content, function(err,result){
             // Extract the value from the data element
-            extractedData = result['Results'];
+            extractedData = result['shows'];
         });
 
         //console.log(util.inspect(extractedData, false, null));

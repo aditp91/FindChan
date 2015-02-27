@@ -57,8 +57,8 @@
       <file leaf-file-name="tvrage_informationprovider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87289435" vertical-offset="0" max-vertical-offset="735">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.712098" vertical-offset="0" max-vertical-offset="735">
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -766,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87289435" vertical-offset="0" max-vertical-offset="735">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.712098" vertical-offset="0" max-vertical-offset="735">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
           <folding />
         </state>
       </provider>
