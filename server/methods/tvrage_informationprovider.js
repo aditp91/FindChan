@@ -34,11 +34,11 @@ Meteor.methods({
 
         //console.log(util.inspect(extractedData, false, null));
 
-        for (i=0; i < 5000; i++) {
+        for (i=0; i < 2000; i++) {
             if (extractedData.show[i].status[0] === '1') {
                 var show_name = extractedData.show[i].name[0];
                 var show_id = extractedData.show[i].id[0];
-                console.log("Show Name:" + show_name + "ID: " + show_id);
+                console.log("Name:" + show_name + "\t\t\tID:" + show_id);
             }
         }
 
