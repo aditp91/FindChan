@@ -38,7 +38,7 @@ Meteor.methods({
             if (extractedData.show[i].status[0] === '1') {
                 var show_name = extractedData.show[i].name[0];
                 var show_id = extractedData.show[i].id[0];
-                console.log("Name:" + show_name + "\t\t\tID:" + show_id);
+                console.log("Name: " + show_name + "\nID: " + show_id);
             }
         }
 
