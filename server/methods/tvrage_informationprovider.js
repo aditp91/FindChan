@@ -10,7 +10,6 @@ Meteor.methods({
 
         var BASE_URL = "http://services.tvrage.com/feeds/";
         var url = BASE_URL + showlist;
-        var shows = "";
         var result = "";
         this.unblock();
 
@@ -32,20 +31,24 @@ Meteor.methods({
             extractedData = result['shows'];
         });
 
-        //console.log(util.inspect(extractedData, false, null));
-
-        for (i=0; i < 2000; i++) {
+        // Make Show objects from xml entities
+        for (i=0; i < 50; i++) {
             if (extractedData.show[i].status[0] === '1') {
                 var show_name = extractedData.show[i].name[0];
                 var show_id = extractedData.show[i].id[0];
-                console.log("Name: " + show_name + "\nID: " + show_id);
+                var showobj = new Show(show_name, show_id);
+                showobj.getDetails();
             }
         }
-
-        return shows;
     }
 
 });
 
+function Show(showname, showid) {
+    this.name = showname;
+    this.id = showid;
 
-
+    this.getDetails = function() {
+        console.log("Name: " + this.name + "\nID: " + this.id);
+    }
+}
