@@ -37,7 +37,11 @@ Meteor.methods({
                 var show_name = extractedData.show[i].name[0];
                 var show_id = extractedData.show[i].id[0];
                 var showobj = new Show(show_name, show_id);
+
+                // NEXT STEP IS TO PERSIST OBJECT TO DATABASE (if it doesn't exist already)
+                // TVLISTINGS TABLE + MAKE NEW TABLE FOR JUST SHOWS
                 showobj.getDetails();
+
             }
         }
     }
