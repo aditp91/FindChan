@@ -53,6 +53,6 @@ function Show(showname, showid) {
     this.id = showid;
 
     this.getDetails = function() {
-        console.log("Name: " + this.name + "\nID: " + this.id);
+        console.log("Name: " + this.name + "\nID: " + this.id + "\n");
     }
 }
