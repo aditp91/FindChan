@@ -13,6 +13,7 @@ natestrauser:font-awesome
 matb33:collection-hooks
 reactive-dict
 mizzao:bootboxjs
+mizzao:sharejs
 mrt:moment
 rajit:bootstrap3-datepicker
 http
@@ -21,3 +22,4 @@ meteorhacks:npm
 
 npm-container
 peerlibrary:util
+underscore
