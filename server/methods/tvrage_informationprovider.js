@@ -43,6 +43,7 @@ Meteor.methods({
                 showobj.getDetails();
                 console.log("Attempting to persist into Mongo collection: Tvlitstings");
 
+                // Need to somehow insert using 'submit' action's functionality
                 Tvlistings.insert(values, function(e) { if(e) errorAction(e.message); else submitAction(); });
 
             }

@@ -64,21 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="insert.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47013783" vertical-offset="668" max-vertical-offset="1875">
-              <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="1875">
+              <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tvrage_informationprovider.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tvrage_informationprovider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="1020">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4257274" vertical-offset="352" max-vertical-offset="1035">
+              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -113,8 +113,9 @@
         <option value="$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js" />
         <option value="$PROJECT_DIR$/.meteor/versions" />
         <option value="$PROJECT_DIR$/.meteor/packages" />
-        <option value="$PROJECT_DIR$/server/methods/tvrage_informationprovider.js" />
         <option value="$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.html" />
+        <option value="$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js" />
+        <option value="$PROJECT_DIR$/server/methods/tvrage_informationprovider.js" />
       </list>
     </option>
   </component>
@@ -931,14 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="1020">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.083333" vertical-offset="856" max-vertical-offset="1485">
@@ -997,8 +990,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47013783" vertical-offset="668" max-vertical-offset="1875">
-          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="1875">
+          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4257274" vertical-offset="352" max-vertical-offset="1035">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding />
         </state>
       </provider>
