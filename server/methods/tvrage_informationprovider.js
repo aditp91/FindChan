@@ -52,7 +52,6 @@ Meteor.methods({
 
 });
 
-
 function Show(showname, showid) {
     this.name = showname;
     this.id = showid;
