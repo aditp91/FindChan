@@ -30,7 +30,7 @@ Meteor.methods({
             // Extract the value from the data element
             extractedData = result['shows'];
         });
-`
+
         // Make Show objects from xml entities
         for (i=0; i < 50; i++) {
             if (extractedData.show[i].status[0] === '1') {
