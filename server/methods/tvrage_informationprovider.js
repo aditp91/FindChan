@@ -26,7 +26,7 @@ Meteor.methods({
         // Parse the xml
         var extractedData = "";
         var parser = new xml2js.Parser(); //using xml2js object converter
-        parser.parseString(result.content, function(err,resultaf){
+        parser.parseString(result.content, function(err,result){
             // Extract the value from the data element
             extractedData = result['shows'];
         });
@@ -51,6 +51,7 @@ Meteor.methods({
     }
 
 });
+
 
 function Show(showname, showid) {
     this.name = showname;
