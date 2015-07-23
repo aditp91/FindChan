@@ -49,7 +49,6 @@ Meteor.methods({
             }
         }
     }
-
 });
 
 function Show(showname, showid) {
