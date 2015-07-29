@@ -41,7 +41,7 @@ Meteor.methods({
                 // NEXT STEP IS TO PERSIST OBJECT TO DATABASE (if it doesn't exist already)
                 // TVLISTINGS TABLE + MAKE NEW TABLE FOR JUST SHOWS
                 showobj.getDetails();
-                console.log("Attempting to persist into Mongo collection: Tvlitstings");
+                console.log("Attempting to persist into Mongo collection: Tvlistings");
 
                 // Need to somehow insert using 'submit' action's functionality
                 Tvlistings.insert(values, function(e) { if(e) errorAction(e.message); else submitAction(); });
