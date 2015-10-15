@@ -61,5 +61,3 @@ function Show(showname, showid) {
 }
 
 
-
-
