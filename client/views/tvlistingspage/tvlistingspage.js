@@ -13,7 +13,6 @@ Template.Tvlistingspage.events({
 		e.preventDefault();
 		Router.go("", {});
 	}
-
 	
 });
 
