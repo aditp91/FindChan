@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/FindChan.iml" filepath="$PROJECT_DIR$/.idea/FindChan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FindChan.iml" filepath="$PROJECT_DIR$/FindChan.iml" />
     </modules>
   </component>
 </project>

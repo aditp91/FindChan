@@ -90,8 +90,6 @@ Template.TvlistingspageInsertInsertForm.events({
 	"click #form-cancel-button": function(e, t) {
 		e.preventDefault();
 
-		
-
 		Router.go("tvlistingspage", {});
 	},
 	"click #form-close-button": function(e, t) {
