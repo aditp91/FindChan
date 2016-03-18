@@ -18,7 +18,7 @@ mrt:moment
 rajit:bootstrap3-datepicker
 meteorhacks:npm
 
-npm-container
+#npm-container
 peerlibrary:util
 http
 underscore

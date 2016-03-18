@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b897568-5b6f-4b9d-9403-b6b1d8248387" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/packages/npm-container/index.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/packages/npm-container/package.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -11,6 +12,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js" afterPath="$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/methods/tvrage_informationprovider.js" afterPath="$PROJECT_DIR$/server/methods/tvrage_informationprovider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
     </list>
     <ignored path="FindChan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +51,29 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="insert.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+=======
+      <file leaf-file-name="tvlistingspage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="packages" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.meteor/packages">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45517242">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
               <folding />
             </state>
           </provider>
@@ -67,11 +89,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tvrage_informationprovider.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tvrage_informationprovider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.16551724">
               <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
               <folding />
             </state>
           </provider>
@@ -92,10 +119,13 @@
       <list>
         <option value="$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js" />
         <option value="$PROJECT_DIR$/.meteor/packages" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/methods/tvrage_informationprovider.js" />
         <option value="$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.js" />
         <option value="$PROJECT_DIR$/client/views/tvlistingspage/tvlistingspage.html" />
+=======
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
       </list>
     </option>
   </component>
@@ -273,6 +303,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="both" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindChan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindChan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".meteor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -756,12 +800,20 @@
       <workItem from="1458162293979" duration="57000" />
       <workItem from="1458162369274" duration="210000" />
       <workItem from="1458162875995" duration="71000" />
+<<<<<<< HEAD
       <workItem from="1458163011975" duration="11701000" />
+=======
+      <workItem from="1458163011975" duration="2744000" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="14121000" />
+=======
+    <option name="totallyTimeSpent" value="5164000" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1103,6 +1155,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/http_utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04137931">
@@ -1115,13 +1168,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04137931">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/tvlistingspage/insert/insert.js">
+    <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
           <folding />
         </state>
@@ -1144,14 +1204,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+=======
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/tvrage_informationprovider.js">
+    <entry file="file://$PROJECT_DIR$/.meteor/packages">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.16551724">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+=======
+        <state vertical-scroll-proportion="0.45517242">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+>>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
           <folding />
         </state>
       </provider>
