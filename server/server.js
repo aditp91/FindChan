@@ -1,3 +1,6 @@
+/** @namespace Meteor.settings */
+Meteor.settings
+
 Meteor.startup(function() {
 	// read environment variables from Meteor.settings
 	if(Meteor.settings && Meteor.settings.env && _.isObject(Meteor.settings.env)) {

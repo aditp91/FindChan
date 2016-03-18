@@ -136,28 +136,32 @@ Template.TvlistingspageView.events({
 					searchInput.val("");
 					pageSession.set("TvlistingspageViewSearchString", "");
 				}
-
 			}
 			return false;
 		}
-
 		return true;
 	},
 
 	"click #dataview-tvragehttpget-button": function(e, t) {
 		e.preventDefault();
+
+		alert("reached refresh");
+
 		Meteor.call('getShows',
 			function (err, result) {
 				if (err) {
 					alert('Error: ' + err.message)
 				} else {
-					//alert(JSON.stringify(result, null, 2))
+					alert(JSON.stringify(result, null, 2))
 				}
 			});
 	},
 
 	"click #dataview-insert-button": function(e, t) {
 		e.preventDefault();
+
+		console.log("reached console insert")
+
 		Router.go("tvlistingspage.insert", {});
 	},
 

@@ -6,7 +6,7 @@ Meteor.methods({
     getShows: function() {
 
         //change
-        var showlist = "show_list.php";
+        var showlist = "episode_list.php";
 
         var BASE_URL = "http://services.tvrage.com/feeds/";
         var url = BASE_URL + showlist;
@@ -45,7 +45,6 @@ Meteor.methods({
 
                 // Need to somehow insert using 'submit' action's functionality
                 Tvlistings.insert(values, function(e) { if(e) errorAction(e.message); else submitAction(); });
-
 
 
             }
