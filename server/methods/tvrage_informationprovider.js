@@ -67,6 +67,7 @@ function persistShows(showObjects) {
     //}
 }
 
+
 function Show(showname, showid) {
     this.name = showname;
     this.id = showid;
