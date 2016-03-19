@@ -23,16 +23,6 @@ Meteor.methods({
             throw new Meteor.Error(result.statusCode, errorJson.error);
         }
 
-        /*
-        //Parse the xml
-        var extractedData = "";
-        var parser = new xml2js.Parser(); //using xml2js object converter
-        parser.parseString(result.content, function(err,result){
-            // Extract the value from the data element
-            extractedData = result['shows'];
-        });
-        */
-
         var array = JSON.parse(result.content);
         parseShows(array);
     }
@@ -66,7 +56,6 @@ function persistShows(showObjects) {
         });
     //}
 }
-
 
 function Show(showname, showid) {
     this.name = showname;

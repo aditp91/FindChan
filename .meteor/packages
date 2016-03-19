@@ -19,7 +19,7 @@ rajit:bootstrap3-datepicker
 meteorhacks:npm
 
 #npm-container
+#peerlibrary:xml2js
 peerlibrary:util
 http
 underscore
-peerlibrary:xml2js
