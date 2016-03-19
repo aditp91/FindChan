@@ -145,8 +145,6 @@ Template.TvlistingspageView.events({
 	"click #dataview-tvragehttpget-button": function(e, t) {
 		e.preventDefault();
 
-		alert("reached refresh");
-
 		Meteor.call('getShows',
 			function (err, result) {
 				if (err) {
@@ -159,8 +157,6 @@ Template.TvlistingspageView.events({
 
 	"click #dataview-insert-button": function(e, t) {
 		e.preventDefault();
-
-		console.log("reached console insert")
 
 		Router.go("tvlistingspage.insert", {});
 	},

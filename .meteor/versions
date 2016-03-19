@@ -45,10 +45,6 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 mrt:moment@2.8.1
 natestrauser:font-awesome@4.3.0
-<<<<<<< HEAD
-npm-container@1.1.0
-=======
->>>>>>> a5046d8d2c53fa4161bdbc9c72613a1d7154eabc
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 peerlibrary:blocking@0.5.2
