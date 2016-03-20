@@ -32,7 +32,7 @@ function parseShows(showsArray) {
     // Make Show objects from JSON objects
     var showObjects = [];
     for (i=0; i < 5; i++) {
-        //console.log("Show obj is: " + JSON.stringify(showsArray[i].show));
+        console.log("Show obj is: " + JSON.stringify(showsArray[i].show));
         if (showsArray[i].show.status === "Running") {
             var show_name = showsArray[i].show.name;
             var show_id = showsArray[i].show.id;
