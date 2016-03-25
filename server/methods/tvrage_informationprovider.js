@@ -54,7 +54,7 @@ function persistShows(showObjects) {
     console.log("Attempting to persist into TVListings collection: Tvlistings");
 
     for(var x=0; x < showObjects.length; x++) {
-        Tvlistings.insert(showObjects[x], function (e) {
+        Tvlistings.update(showObjects[x], function (e) {
             if (e) errorAction(e.message);
         });
     }
