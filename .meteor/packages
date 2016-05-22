@@ -24,3 +24,4 @@ peerlibrary:util
 http
 underscore
 peerlibrary:blocking
+accounts-meteor-developer
