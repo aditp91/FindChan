@@ -24,7 +24,7 @@ Meteor.methods({
         }
 
         var array = JSON.parse(result.content);
-        //parseShows(array);
+        parseShows(array);
     }
 });
 
