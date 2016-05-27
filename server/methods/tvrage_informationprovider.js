@@ -28,7 +28,6 @@ Meteor.methods({
     }
 });
 
-
 function parseShows(showsArray) {
     // Make Show objects from JSON objects
     var showObjects = [];
